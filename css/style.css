@@ -10,6 +10,10 @@ body {
 ul{
     list-style:none;
 }
+a {
+    text-decoration:none;
+    color: rgb(145, 148, 150);
+}
 .text-color-white{
     color:white;
 }
@@ -49,13 +53,14 @@ footer{
     width:200px;
     height:100%;
     float:left;
-    padding-left:15px;
+    padding: 0 10px;
     display:flex;
     flex-direction:column;
     justify-content: space-between;
+
 }
 
-.ms-logo-big {
+.ms-home-menu-container>.ms-logo-big {
     width: 150px;
     padding:10px 0 20px 0;
 }
@@ -63,7 +68,8 @@ footer{
     display:none;
 }
 
-.ms-home-menu-container{
+.ms-home-menu-container,
+.ms-account-details {
     display: flex;
     align-items: center;
     padding: 5px 0;
@@ -71,8 +77,13 @@ footer{
 .ms-home-menu-container img{
     width:25px;
 }
-.ms-home-menu-container p{
-margin-left: 5px;
+.ms-home-menu-container a{
+    margin-left: 5px;
+    cursor:pointer;
+}
+
+.ms-home-menu-container a:hover{
+    color:white;
 }
 
 h4 {
@@ -84,6 +95,11 @@ h4 {
 .ms-playlist>li{
     padding: 5px 0;
 }
+
+.ms-playlist>li:hover a{
+    color: white;
+    cursor: pointer; 
+}
 .ms-playlist>li:first-child{
    display:flex;
    align-items: center;
@@ -92,9 +108,35 @@ h4 {
     width:25px;
     height:25px;
     padding: 5px;
-    background-color: rgb(145, 148, 150);;
+    background-color: rgb(145, 148, 150);
     margin-right: 10px;
     color: black;
+}
+
+.ms-account-details .ms-profile {
+    width: 25px;
+    height: 25px;
+    border-radius:50%;
+    background-color:rgb(145, 148, 150);
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+}
+.ms-account-details .ms-download {
+    width: 25px;
+    color: rgb(145, 148, 150);
+}
+
+.ms-account-details p,
+.ms-account-details a{
+    margin-left: 5px;
+}
+
+.ms-menu-bottom hr{
+    color: rgb(145, 148, 150);
+    border-bottom: 0px;
+    margin:5px 0;
 }
 
 
@@ -107,6 +149,8 @@ h4 {
 main {
     position:relative;
     height:100%;
+    width: calc(100% - 200px);
+    float: left;
 }
 .ms-spotify-main-content {
     height:100%;
@@ -131,8 +175,18 @@ main {
 
 /* Media Queries */
 @media all and (max-width: 767px) {
+    main{
+        width: calc(100% - 50px);
+    }
+
+    .ms-home-menu-container,
+    .ms-account-details{
+        justify-content:center;
+
+    }
     .ms-menu-bar-left {
         width: 50px;
+        align-items: center;
     }
     .ms-upgrade-button {
         width:calc(100% - 50px);
@@ -141,7 +195,7 @@ main {
     .ms-logo-small{
         display:block;
         width: 25px;
-        margin:10px 0 20px 0;
+        margin:10px 0;
     }
 
     .ms-hide-responsive {
