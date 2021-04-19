@@ -10,6 +10,9 @@ body {
 ul{
     list-style:none;
 }
+.text-color-white{
+    color:white;
+}
 
 .ms-wrapper {
     height: calc(100vh - 90px);
@@ -51,14 +54,6 @@ footer{
     flex-direction:column;
     justify-content: space-between;
 }
-.ms-home-menu-container{
-    display: flex;
-    align-items: center;
-
-}
-.ms-home-menu-container img{
-    width:25px;
-}
 
 .ms-logo-big {
     width: 150px;
@@ -67,6 +62,42 @@ footer{
 .ms-logo-small {
     display:none;
 }
+
+.ms-home-menu-container{
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+.ms-home-menu-container img{
+    width:25px;
+}
+.ms-home-menu-container p{
+margin-left: 5px;
+}
+
+h4 {
+    margin-top:20px;
+    margin-bottom:10px;
+    text-transform: uppercase; 
+}
+
+.ms-playlist>li{
+    padding: 5px 0;
+}
+.ms-playlist>li:first-child{
+   display:flex;
+   align-items: center;
+}
+.ms-playlist .fa-plus {
+    width:25px;
+    height:25px;
+    padding: 5px;
+    background-color: rgb(145, 148, 150);;
+    margin-right: 10px;
+    color: black;
+}
+
+
 
 
 
