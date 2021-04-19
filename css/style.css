@@ -3,6 +3,13 @@
     margin:0;
     padding:0;
 }
+body {
+    font-family: 'Rubik', sans-serif;
+    color: rgb(145, 148, 150);
+}
+ul{
+    list-style:none;
+}
 
 .ms-wrapper {
     height: calc(100vh - 90px);
@@ -39,7 +46,31 @@ footer{
     width:200px;
     height:100%;
     float:left;
+    padding-left:15px;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
 }
+.ms-home-menu-container{
+    display: flex;
+    align-items: center;
+
+}
+.ms-home-menu-container img{
+    width:25px;
+}
+
+.ms-logo-big {
+    width: 150px;
+    padding:10px 0 20px 0;
+}
+.ms-logo-small {
+    display:none;
+}
+
+
+
+
 
 /* Main Content */
 main {
@@ -55,7 +86,7 @@ main {
     position:fixed;
     top:0;
     right:0;
-    width:100%;
+    width:calc(100% - 200px);
     background-color: rgba(0, 0, 0, 0.171);
     text-align:right;
 }
@@ -71,5 +102,18 @@ main {
 @media all and (max-width: 767px) {
     .ms-menu-bar-left {
         width: 50px;
+    }
+    .ms-upgrade-button {
+        width:calc(100% - 50px);
+    }
+
+    .ms-logo-small{
+        display:block;
+        width: 25px;
+        margin:10px 0 20px 0;
+    }
+
+    .ms-hide-responsive {
+        display:none;
     }
 }
