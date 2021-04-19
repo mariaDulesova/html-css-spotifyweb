@@ -5,6 +5,7 @@
 }
 body {
     font-family: 'Rubik', sans-serif;
+    font-size: 13px;
     color: rgb(145, 148, 150);
 }
 ul{
@@ -13,6 +14,7 @@ ul{
 a {
     text-decoration:none;
     color: rgb(145, 148, 150);
+    transition: all 0.2s;
 }
 .text-color-white{
     color:white;
@@ -34,10 +36,6 @@ aside {
     background-color: black;
 }
 
-header {
-    height:50px;
-    background-color: green;
-}
 
 footer{
     width: 100%;
@@ -90,10 +88,12 @@ h4 {
     margin-top:20px;
     margin-bottom:10px;
     text-transform: uppercase; 
+    font-size: 1.0rem;
 }
 
 .ms-playlist>li{
     padding: 5px 0;
+    
 }
 
 .ms-playlist>li:hover a{
@@ -105,12 +105,18 @@ h4 {
    align-items: center;
 }
 .ms-playlist .fa-plus {
-    width:25px;
-    height:25px;
     padding: 5px;
     background-color: rgb(145, 148, 150);
     margin-right: 10px;
     color: black;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+.ms-playlist .fa-plus:hover{
+    background-color:white;
 }
 
 .ms-account-details .ms-profile {
@@ -140,9 +146,25 @@ h4 {
 }
 
 
-
-
-
+/* Header */
+header{
+    background-color: #141922; 
+}
+/* Nav */
+.ms-menu-content>ul {
+    padding-top: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+.ms-menu-content>ul>li{
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+.ms-menu-content>ul>li:hover a{
+    color:white;
+}
 
 
 /* Main Content */
@@ -151,6 +173,12 @@ main {
     height:100%;
     width: calc(100% - 200px);
     float: left;
+    background-color: #141922;
+}
+h2{
+    margin: 30px 0;
+    padding: 0 15px;
+    font-size: 1.3rem;
 }
 .ms-spotify-main-content {
     height:100%;
@@ -162,14 +190,28 @@ main {
     top:0;
     right:0;
     width:calc(100% - 200px);
-    background-color: rgba(0, 0, 0, 0.171);
+    background-color: rgba(0, 0, 0, 0.438);
     text-align:right;
 }
-
-
 .btn {
-    margin: 10px;
+    margin: 15px;
+    padding: 5px 25px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: transparent;
+    font-size: 0.7rem;
+    color:white;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    cursor: pointer;
 }
+
+
+
 
 
 
