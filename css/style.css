@@ -11,6 +11,10 @@ body {
     
     color: rgb(145, 148, 150);
 }
+
+p{
+    padding-bottom:10px;
+}
 ul{
     list-style:none;
 }
@@ -180,7 +184,7 @@ main {
     
 }
 h2{
-    margin: 30px 0 20px 0;
+    margin: 30px 0 10px 0;
     /* padding: 0 15px; */
     font-size: 1.3rem;
 }
@@ -206,7 +210,7 @@ h4{
 }
 
 .ms-sub-container-playlist-column {
-    width:200px;
+    flex-basis:200px;
     /* flex-grow: 1; */
     text-align:center;
     margin:10px 10px 10px 0;
@@ -243,6 +247,20 @@ h4{
     display:block;
 }
 
+.ms-border-radius {
+    border-radius: 50%;;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+
+/* .ms-music-content {
+    display: flex;
+
+    flex-direction: column;
+} */
 
 
 .ms-upgrade-button {
@@ -330,11 +348,14 @@ h4{
     .ms-container-playlist-row{
         flex-wrap:wrap;
     }
+    .ms-sub-container-playlist-column{
+        flex-shrink:0;
+    }
 }
 
 @media all and (max-width: 1200px) {
 
-    .ms-sub-container-playlist-column  {
+    /* .ms-sub-container-playlist-column  {
         flex-grow: 0;
-    }
+    } */
 }
