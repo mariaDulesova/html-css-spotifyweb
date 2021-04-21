@@ -76,6 +76,7 @@
                     </ul>
                 </section>
                 <section class="ms-music-content">
+                    <!-- Recently Played -->
                     <h2 class="text-color-white">Recently played</h2>
                     <div class="ms-container-playlist-row">
                         <div class="ms-sub-container-playlist-column">
@@ -139,6 +140,9 @@
                             <p>Subtitle</p>
                         </div>
                     </div>
+                    <!-- /Recently Played -->
+
+                    <!-- Creato per John Doe -->
                     <h2 class="text-color-white"> Creato per John Doe</h2>  
                     <p>Piu' ascolti, piu' accurati saranno i suggerimenti</p>
                     <div class="ms-container-playlist-row">
@@ -161,6 +165,9 @@
                             <h4>Dayly Mix</h4>
                         </div>
                     </div> 
+                    <!-- /Creato per John Doe -->
+
+                    <!-- Artisti piu' popolari -->
                     <h2 class="text-color-white"> Artisti piu' popolari</h2>
                     <p>Piu' ascolti, piu' accurati saranno i suggerimenti</p>
                     <div class="ms-container-playlist-row">
@@ -183,6 +190,8 @@
                             <h4>Dayly Mix</h4>
                         </div>
                     </div> 
+                    <!-- /Artisti piu' popolari -->
+
                 </section>
             </div>
             <div class="ms-upgrade-button">
@@ -190,18 +199,21 @@
             </div> 
         </main>  
         <!-- /Main -->
-    </div>
+    </div>  <!-- Chiusura Clearfix su aside/main -->
 
     <!-- Footer -->
     <footer>
         <div class="ms-footer-left">
-            <img src="img/sinister.jpeg" alt="Sinister">
+            <img src="img/sinister.jpeg" alt="Sinister" >
             <div class="ms-currently-playing-title">
                 <h6 class="text-color-white">Sinister</h6>
                 <p>Brano Nome</p>
             </div>
-            <i class="far fa-heart"></i>
-            <i class="far fa-folder"></i>
+            <div class="ms-saved">
+                <i class="far fa-heart"></i>
+                <i class="far fa-folder"></i>
+            </div>
+            
             <!-- <i class="far fa-folder-open"></i> -->
         </div>
         <div class="ms-footer-center">
@@ -223,8 +235,10 @@
             </div>
         </div>
         <div class="ms-footer-right">
-            <i class="fas fa-list"></i>
-            <i class="fas fa-desktop"></i>
+            <div class="ms-options">
+                <i class="fas fa-list"></i>
+                <i class="fas fa-desktop"></i>
+            </div>
             <i class="fas fa-volume-up"></i>
             <div class="ms-visible">
                 <div class="ms-hidden">
@@ -233,7 +247,6 @@
             </div>
             
         </div>
-
     </footer>
      <!-- /Footer -->
 
