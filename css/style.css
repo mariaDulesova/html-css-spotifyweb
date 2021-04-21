@@ -4,11 +4,10 @@
     padding:0;
 }
 html{
-    font-size: 13px;
+    font-size: 14px;
 }
 body {
     font-family: 'Rubik', sans-serif;
-
     color: rgb(145, 148, 150);
 }
 
@@ -38,18 +37,10 @@ a {
 }
 
 
-/* Debug */
+/* Menu Aside */
 aside {
     background-color: black;
 }
-
-
-
-
-
-
-
-/* Menu Aside */
 .ms-menu-bar-left{
     width:200px;
     height:100%;
@@ -58,10 +49,9 @@ aside {
     display:flex;
     flex-direction:column;
     justify-content: space-between;
-
 }
 
-.ms-home-menu-container>.ms-logo-big {
+.ms-logo-big {
     width: 150px;
     padding:10px 0 20px 0;
 }
@@ -69,11 +59,12 @@ aside {
     display:none;
 }
 
+.ms-home-menu-container-logo,
 .ms-home-menu-container,
 .ms-account-details {
     display: flex;
     align-items: center;
-    padding: 5px 0;
+    padding: 5px;
 }
 .ms-home-menu-container img{
     width:25px;
@@ -83,25 +74,36 @@ aside {
     cursor:pointer;
 }
 
-.ms-home-menu-container a:hover{
+.ms-home-menu-container:hover {
     color:white;
+    border-left: 2px solid yellowgreen;
 }
 
 h5 {
-    margin-top:20px;
-    margin-bottom:10px;
+    margin:20px 0px 10px 5px;
     text-transform: uppercase;
     font-size: 1.0rem;
 }
 
+
+.ms-create-playlist-account {
+    height:100%;
+    overflow-y: auto;
+}
+
 .ms-playlist>li{
-    padding: 5px 0;
+    padding: 5px;
+    transition: all 0.2s;
+}
+.ms-playlist>li:hover {
+    border-left: 2px solid yellowgreen;
 
 }
 
-.ms-playlist>li:hover a{
+.ms-playlist>li:hover a {
     color: white;
     cursor: pointer;
+    
 }
 .ms-playlist>li:first-child{
    display:flex;
@@ -118,7 +120,8 @@ h5 {
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
 }
-.ms-playlist .fa-plus:hover{
+
+.ms-playlist>li:first-child:hover .fa-plus {
     background-color:white;
 }
 
@@ -142,6 +145,7 @@ h5 {
     margin-left: 5px;
 }
 
+
 .ms-menu-bottom hr{
     color: rgb(145, 148, 150);
     border-bottom: 0px;
@@ -150,10 +154,8 @@ h5 {
 
 
 /* Section Menu */
-
 .ms-menu-content {
-    background-color:  #141922;
-    
+    background-color:  #141922; 
 }
 .ms-menu-content>ul {
     padding-top: 75px;
@@ -163,12 +165,33 @@ h5 {
     flex-wrap: wrap;
 }
 .ms-menu-content>ul>li{
+    position:relative;
     padding: 5px 10px;
     text-transform: uppercase;
     line-height:30px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
 }
+
 .ms-menu-content>ul>li:hover a{
     color:white;
+}
+.ms-menu-content>ul>li:hover .ms-bottom-line-hover::after {
+    content: "";
+    background: yellowgreen;
+    width: 40%;
+    height: 2px;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
 }
 
 
@@ -179,16 +202,14 @@ main {
     width: calc(100% - 200px);
     float: left;
     background-color: #141922;
-
 }
 h2{
     margin: 30px 0 10px 0;
-    /* padding: 0 15px; */
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 h4{
     margin: 10px 0;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     color:white;
 }
 .ms-spotify-main-content {
@@ -207,7 +228,7 @@ h4{
 }
 
 .ms-sub-container-playlist-column {
-    flex-basis:165px;
+    flex-basis:160px;
     text-align:center;
     margin:10px 10px 10px 0;
 }
@@ -224,7 +245,6 @@ h4{
     top:0;
     left:0;
     background-color: rgba(0, 0, 0, 0.575);
-
 }
 
 .ms-cover-play>.fa-play-circle{
@@ -300,6 +320,16 @@ footer{
     justify-content: center;
     align-items: center;
 }
+.ms-footer-left i,
+.ms-footer-right i{
+    display: inline-block;
+    padding: 5px;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
 .ms-footer-center {
     width:40%;
     height:100%;
@@ -365,10 +395,11 @@ footer{
     padding-right:5px;
 }
 
-.ms-footer-left i,
-.ms-footer-right i{
-    display: inline-block;
-    padding: 5px;
+
+
+.ms-footer-left i:hover,
+.ms-footer-right i:hover {
+    color: white;
 }
 
 /* Footer Center */
@@ -383,7 +414,6 @@ footer{
     display: inline-block;
     margin: 5px 10px;
     color: white;
-
 }
 
 .ms-time {
@@ -394,9 +424,6 @@ footer{
 
 
 
-
-
-
 /* Media Queries */
 @media all and (max-width: 992px){
     
@@ -404,9 +431,6 @@ footer{
         flex-wrap: wrap;
     }
     
-    .ms-sub-container-playlist-column {
-        flex-basis: 160px;
-    }
 }
 
 @media all and (max-width: 768px){
@@ -415,7 +439,6 @@ footer{
     }
     
 }
-
 
 @media all and (max-width: 576px) {
 
@@ -444,6 +467,8 @@ footer{
     .ms-hide-responsive {
         display:none;
     }
+
+    
     .ms-sub-container-playlist-column {
         flex-basis: 135px;
     }
@@ -472,8 +497,11 @@ footer{
     html{
         font-size: 11px;
     }
+    .ms-container-playlist-row{
+        justify-content: space-between;
+    }
     .ms-sub-container-playlist-column {
-        flex-basis: 100px;
+        flex-basis: 110px;
     }
 
     .ms-music-buttons i {
