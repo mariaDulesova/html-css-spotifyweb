@@ -249,7 +249,7 @@ main {
 }
 
 .ms-sub-container-playlist-column {
-    width: calc(100% / 6);
+    width: calc((100% / 6) - 10px);
     /* flex-basis:160px; */
     text-align:center;
     margin:10px 10px 10px 0;
@@ -366,13 +366,14 @@ footer{
 }
 
 .ms-visible{
-    position:relative;
+    /* position:relative; */
     width: 60%;
     height: 4px;
     border: 1px solid rgb(145, 148, 150);
     background-color:rgb(145, 148, 150);
 }
 .ms-hidden{
+    position:relative;
     width: 40%;
     height:3px;
     background-color: white;
@@ -388,13 +389,19 @@ footer{
 .ms-circle{
     display: none;
     position: absolute;
-    top:-600%;
-    left: 38%;
+    top: 40%;
+    right: 00;
+    transform: translateY(-50%);
     font-size: 20px;
     transition: all 0.5s;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 }
 .ms-hidden:hover{
     background-color: greenyellow;
+    
 }
 .ms-hidden:hover .ms-circle{
     display:block;
@@ -453,7 +460,8 @@ footer{
 
 @media all and (max-width: 768px){
     .ms-sub-container-playlist-column {
-        flex-basis: 150px;
+        /* flex-basis: 150px; */
+        width: calc((100% / 4) - 10px);
     }
 
 }
@@ -488,7 +496,8 @@ footer{
 
 
     .ms-sub-container-playlist-column {
-        flex-basis: 135px;
+        /* flex-basis: 135px; */
+        width: calc((100% / 2) - 10px);
     }
 
     .ms-saved,
@@ -519,7 +528,8 @@ footer{
         justify-content: space-between;
     }
     .ms-sub-container-playlist-column {
-        flex-basis: 110px;
+        /* flex-basis: 110px; */
+        width: calc((100% / 2) - 10px);
     }
 
     .ms-music-buttons i {
